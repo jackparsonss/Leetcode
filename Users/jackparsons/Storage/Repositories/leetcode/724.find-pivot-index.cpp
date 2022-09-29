@@ -17,10 +17,10 @@ public:
             left_s += nums[left];
             right_s += nums[right];
             left++; right--;
-        } while(left_s != right_s && left < right);
+        } while(left_s != right_s && left <= right);
 
         if(left <= right) {
-            return left;
+            return left+1;
         }
 
         return -1;
