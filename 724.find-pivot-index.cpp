@@ -11,20 +11,31 @@ using namespace std;
 class Solution {
 public:
     int pivotIndex(vector<int>& nums) {
-        int left = 0, right = nums.size()-1;
-        int left_s = 0, right_s = 0;
-        do {
-            left_s += nums[left];
-            right_s += nums[right];
-            left++; right--;
-        } while(left_s != right_s && left <= right);
+        int left = 0, right = 0;
 
-        if(left <= right) {
-            return left+1;
+        for (int i = 1; i < nums.size(); i++){
+            right += nums[i];
         }
 
+        if(right == 0) {
+            return 0;
+        }
+
+        for (int i = 1; i < nums.size(); i++){
+            right -= nums[i];
+            left += nums[i-1];
+
+            if(left == right) {
+                return i;
+            }
+        }
+
+        if(left == 0) {
+            return nums.size()-1;
+        }
+        
         return -1;
-    }
+    } 
 };
 // @lc code=end
 
