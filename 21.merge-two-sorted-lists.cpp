@@ -1,0 +1,78 @@
+/*
+ * @lc app=leetcode id=21 lang=cpp
+ *
+ * [21] Merge Two Sorted Lists
+ */
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+// @lc code=start
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        if(list1 == nullptr && list2 == nullptr) {
+            return nullptr;
+        }
+
+        if(list1 == nullptr) {
+            return list2;
+        }
+
+        if(list2 == nullptr) {
+            return list1;
+        }
+
+        ListNode* head;
+        if(list1->val < list2->val) {
+            head = new ListNode(list1->val);
+            list1 = list1->next;
+        } else {
+            head = new ListNode(list2->val);
+            list2 = list2->next;
+        }
+
+        ListNode* srted = head;
+        while(list1 != nullptr && list2 != nullptr){
+            if(list1->val < list2->val) {
+                srted->next = list1;
+                list1 = list1->next;
+            } else {
+                srted->next = list2;
+                list2 = list2->next;
+            } 
+        }
+        
+
+        while(list1 != nullptr) {
+            srted->next = list1;
+            list1 = list1->next;
+            srted = srted->next;
+        }
+
+        while(list2 != nullptr) {
+            srted->next = list2;
+            list2 = list2->next;
+            srted = srted->next;
+        }
+
+        return head;
+    }
+};
+// @lc code=end
+
