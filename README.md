@@ -1,4 +1,4 @@
 # Leetcode Questions
 Quesions I have completed for leetcode.
 
-Currently completed the leetcode 75
+Currently completing the leetcode 75
