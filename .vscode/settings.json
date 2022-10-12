@@ -3,6 +3,7 @@
   "files.associations": {
     "vector": "cpp",
     "ostream": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "unordered_map": "cpp"
   }
 }
