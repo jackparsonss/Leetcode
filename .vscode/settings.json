@@ -2,6 +2,7 @@
   "editor.formatOnSave": false,
   "files.associations": {
     "vector": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "ios": "cpp"
   }
 }
