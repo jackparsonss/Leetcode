@@ -42,7 +42,7 @@ public:
         ListNode* fast = head;
         while(fast && fast->next) {
             half = half->next;
-            fast = fast->next;
+            fast = fast->next->next;
         }
 
         ListNode* first_half = head;
