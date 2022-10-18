@@ -6,6 +6,11 @@
     "ios": "cpp",
     "unordered_map": "cpp",
     "iosfwd": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "chrono": "cpp",
+    "limits": "cpp",
+    "random": "cpp",
+    "valarray": "cpp",
+    "algorithm": "cpp"
   }
 }
