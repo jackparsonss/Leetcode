@@ -13,6 +13,7 @@
     "valarray": "cpp",
     "algorithm": "cpp",
     "stack": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "string": "cpp"
   }
 }
