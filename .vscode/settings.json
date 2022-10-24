@@ -12,6 +12,7 @@
     "random": "cpp",
     "valarray": "cpp",
     "algorithm": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "list": "cpp"
   }
 }
